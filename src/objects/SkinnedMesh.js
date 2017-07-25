@@ -197,9 +197,9 @@ SkinnedMesh.prototype = Object.assign( Object.create( Mesh.prototype ), {
 
 	},
 
-	clone: function () {
+	clone: function ( recursive ) {
 
-		return new this.constructor( this.geometry, this.material ).copy( this );
+		return new this.constructor( this.geometry, this.material ).copy( this, recursive );
 
 	}
 
